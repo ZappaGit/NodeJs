@@ -1,0 +1,48 @@
+=========================================
+=	El objeto GLobal
+========================================
+con 
+> var modl = require('modl.js'); 			//importamos el codigo js, xejem, para ser usado por repl
+
+> modl.setGlobal(23);
+> var val = modl.returnGlobal();
+
+ 
+=========================================
+=	El objeto Process
+========================================
+Cada aplicación Node es una instancia de un Objeto process, con sus funcionalidades preconstruidas. La funcion de este objeto es proveer informacion e identificacion sobre la aplicacion y funciones.
+	.execPath-> da la ruta             > console.log(process.execPath);
+	.version-> da la version	   > console.log(process.version);
+	.platform->da la plataforma	   > console.log(process.platform);
+
+Tambien incluye los srdin/out -> sincronos, de lectura y escritura
+el stderr es un string sincrono de bloqueo
+
+$ node stdin.js				//repite lo q pongas
+
+El .memoryUsage nos dice cuanta memoria esta usando la aplicacion, para mejoras ...
+> process.memoryUsage()
+{ rss: 8675328,
+  heapTotal: 6131200,						//en referencia al motor v8		
+  heapUsed: 2594248 }
+ 
+El process.nextTick    usamos para retrasar alguna funcion asincronamente, el siguiente tick (o evento de loop)
+ejemplo:
+function asynchFunction ) function (data, callback) { process.nextTick(function(){callback(val);});});
+
+
+======================================================================================================
+=	El objeto buffer
+===========================================================
+La clase buffer es un modo de manejar datos binarios en node. 
+Codificaciones posibles
+- ascii		7bits
+- utf8		multibyte
+- usc2		unicode 2bytes
+- base64
+- hex 		cadabyte como dos caracteres hex
+
+se pueden pasar como parametro
+
+http://www.youtube.com/watch?v=EFL85WmKBT0&list=PL38CA7BD8CB5F3FF9
