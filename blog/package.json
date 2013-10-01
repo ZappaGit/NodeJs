@@ -1,0 +1,27 @@
+{
+  "author": "Diego Izquierdo",
+  "name": "Blog",
+  "version": "0.0.0",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit "
+  },
+  "repository": {
+    "url": ""
+  },
+  "dependencies": {
+    "mongoose": "~3.6.20",
+    "express": "~3.4.0",
+    "jade": "~0.35.0",
+    "routes": "~0.2.0",
+    "email-validator": "~0.1.2",
+    "express-mongoose": "~0.1.0",
+    "mongoose-lifecycle": "~1.0.0"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
